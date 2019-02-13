@@ -1,0 +1,22 @@
+plugins { id "com.diffplug.gradle.spotless" version "3.18.0" }
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+spotless {
+  groovy {
+    greclipse()
+    paddedCell() // avoid cyclic ambiguities
+    indentWithSpaces(2)
+  }
+  groovyGradle {
+    greclipse()
+    indentWithSpaces(2)
+  }
+}
+
+dependencies {
+  // https://mvnrepository.com/artifact/org.spockframework/spock-core
+  testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.4'
+}
