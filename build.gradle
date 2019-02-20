@@ -4,6 +4,7 @@ apply plugin: 'groovy'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+/**
 spotless {
   groovy {
     greclipse().configFile('formatter.properties')
@@ -15,6 +16,7 @@ spotless {
     indentWithSpaces(2)
   }
 }
+*/
 
 // In this section you declare where to find the dependencies of your project
 repositories {
